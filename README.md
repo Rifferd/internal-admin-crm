@@ -272,40 +272,6 @@ viewer@example.com / viewer12345
 
 ---
 
-# 4. Запусти seed
-
-Backend должен быть поднят:
-
-```bash
-docker compose up
-```
-
-
-
-## Тестовый пользователь
-
-Если база пустая, можно создать admin-пользователя:
-
-```bash
-curl -X POST http://localhost:8000/api/v1/auth/register \
-  -H "Content-Type: application/json" \
-  -d '{
-    "email": "admin@example.com",
-    "password": "admin12345",
-    "full_name": "Admin User",
-    "role": "admin"
-  }'
-```
-
-Данные для входа:
-
-```text
-email: admin@example.com
-password: admin12345
-```
-
----
-
 ## Backend API
 
 Swagger UI:
@@ -696,43 +662,3 @@ npm run test:run
 ```
 
 ---
-
-## Что можно показать на собеседовании
-
-В проекте есть:
-
-- layered architecture: router → service → repository;
-- async SQLAlchemy;
-- PostgreSQL migrations через Alembic;
-- JWT auth;
-- role-based access;
-- Redis cache;
-- Redis blacklist;
-- Redis rate limit;
-- raw SQL;
-- JOIN;
-- GROUP BY;
-- SUM aggregation;
-- EXPLAIN ANALYZE;
-- backend tests;
-- frontend tests;
-- Docker Compose;
-- GitHub Actions CI;
-- React + TypeScript SPA.
-
----
-
-## Возможные улучшения
-
-Что можно добавить позже:
-
-- нормальный refresh flow на frontend;
-- protected routes на frontend;
-- toast-уведомления;
-- React Query;
-- полноценные select-поля вместо ручного ввода `client_id`, `manager_id`, `deal_id`;
-- отдельную страницу пользователей;
-- больше frontend-тестов;
-- observability: structured logs, metrics, tracing.
-
-Пока эти улучшения специально не добавлены, чтобы не усложнять проект раньше времени.

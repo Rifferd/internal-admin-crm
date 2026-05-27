@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from datetime import date
-from decimal import Decimal
 
 from sqlalchemy import Date, Integer, Select, bindparam, case, func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession

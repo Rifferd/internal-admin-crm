@@ -253,6 +253,35 @@ http://localhost:5173
 
 ---
 
+### Seed data
+
+Чтобы создать тестовые данные:
+
+```bash
+docker compose exec backend python -m app.scripts.seed
+```
+
+Скрипт создаст:
+
+admin@example.com / admin12345
+manager@example.com / manager12345
+viewer@example.com / viewer12345
+тестовых клиентов;
+тестовые сделки;
+тестовые задачи.
+
+---
+
+# 4. Запусти seed
+
+Backend должен быть поднят:
+
+```bash
+docker compose up
+```
+
+
+
 ## Тестовый пользователь
 
 Если база пустая, можно создать admin-пользователя:
